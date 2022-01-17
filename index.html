@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Essai - Leaflet</title>
+
+	<link rel="stylesheet" href="leaflet.css" />
+	<script src="leaflet.js"></script>
+
+	
+</head>
+<body>
+
+
+<div id="mapid" style="width: 1200px; height: 800px;"></div>
+<script>
+
+	var mymap = L.map('mapid').setView([33.976676, -6.867157], 18);
+
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(mymap);
+
+/*
+	L.marker([30.37698, -9.02002]).addTo(mymap)
+		.bindPopup("Bonjour la topo à l'ère Omicron :-) ");
+
+	L.circle([30.37698, -9.02002], 100, {
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+	}).addTo(mymap).bindPopup("Hi!I am a circle.");
+*/
+L.polygon([
+		[33.976676, -6.867157],
+		[33.976752, -6.867079],
+		[33.976722, -6.867035],
+		[33.976801, -6.866957],
+		[33.976741, -6.866868],
+		[33.976813, -6.866790],
+		[33.976690, -6.866596],
+		[33.976612, -6.866663],
+		[33.976560, -6.866597],
+		[33.976481, -6.866663],
+		[33.976536, -6.866758],
+		[33.976496, -6.866755],
+		[33.976423, -6.866648],
+		[33.97631016700356, -6.866759387099254],
+		[33.97644367900052, -6.866971946987562],
+		[33.97641018624074, -6.867001565120226],
+		[33.97636329635489, -6.8669369437398675],
+		[33.976185784408095, -6.867099843470954],
+		[33.97632533785508, -6.867309862957121],
+		[33.976502849508684, -6.867138885554922],
+		[33.9764894524177, -6.867118691373559],
+		[33.97658323202439, -6.867021759303021]
+	], {
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+	}).addTo(mymap).bindPopup("I am a polygon.");
+
+L.polygon([
+		[33.97633451571573, -6.86867683651588],
+		[33.976288742214344, -6.868609522576616],
+		[33.976020799272895, -6.868866661824606],
+		[33.97606992220873, -6.868936668321442]
+	], {
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+	}).addTo(mymap).bindPopup("I am a polygon.");
+
+</script>
+
+
+
+</body>
+</html>
